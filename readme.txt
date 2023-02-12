@@ -2,8 +2,8 @@
 Donate link : http://codedropz.com/donation
 Tags: drag and drop, woocommerce, ajax uploader, multiple file, upload, woocommerce uploader
 Requires at least: 3.0.1
-Tested up to: 5.9.3
-Stable tag: 1.0.7
+Tested up to: 6.1.1
+Stable tag: 1.0.8
 Requires PHP: 5.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -146,6 +146,10 @@ To install this plugin see below:
 8. Upload Display - Front-end
 
 == Changelog ==
+
+= 1.0.8 =
+* Bug - Css fixes font Conflict
+* Check - Test with latest version of Wordpress 6.1.1 and WooCommerce 7.3.0
 
 = 1.0.7 =
 * New - French Translation Updated (Thanks to @dleroux61 / Dominique Le Roux)
