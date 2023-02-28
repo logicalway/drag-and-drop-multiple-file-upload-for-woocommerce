@@ -318,6 +318,10 @@
 
 		public function upload() {
 
+            if( ! check_ajax_referer( 'dnd_wc_ajax_upload', 'security', false ) ){
+                wp_send_json_error('The security nonce is invalid or expired');
+            }
+
 			// input type file 'name'
 			$name = 'dnd-wc-upload-file';
 
@@ -395,9 +399,9 @@
 		public function delete_file() {
 
 			// Verify ajax none
-			if( is_user_logged_in() ) {
-				check_ajax_referer( 'dnd_wc_ajax_upload', 'security' );
-			}
+			if( ! check_ajax_referer( 'dnd_wc_ajax_upload', 'security', false ) ){
+                wp_send_json_error('The security nonce is invalid or expired');
+            }
 
 			// Sanitize Path
 			$get_file_name = ( isset( $_POST['path'] ) ? sanitize_text_field( trim( $_POST['path'] ) ) : null );
